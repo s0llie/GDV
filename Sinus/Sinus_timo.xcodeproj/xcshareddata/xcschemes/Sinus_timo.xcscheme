@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0610"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9B9537B7010C84107E776958"
-               BuildableName = "Sinus.app"
-               BlueprintName = "Sinus"
-               ReferencedContainer = "container:Sinus.xcodeproj">
+               BlueprintIdentifier = "56C266ED559EF232FF1A832C"
+               BuildableName = "Sinus_timo.app"
+               BlueprintName = "Sinus_timo"
+               ReferencedContainer = "container:Sinus_timo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,17 +35,17 @@
                BlueprintIdentifier = "9E73BA301EF4580BE706E2EC"
                BuildableName = "Qt Test"
                BlueprintName = "Qt Test"
-               ReferencedContainer = "container:Sinus.xcodeproj">
+               ReferencedContainer = "container:Sinus_timo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9B9537B7010C84107E776958"
-            BuildableName = "Sinus.app"
-            BlueprintName = "Sinus"
-            ReferencedContainer = "container:Sinus.xcodeproj">
+            BlueprintIdentifier = "56C266ED559EF232FF1A832C"
+            BuildableName = "Sinus_timo.app"
+            BlueprintName = "Sinus_timo"
+            ReferencedContainer = "container:Sinus_timo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <CommandLineArguments>
@@ -71,10 +71,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9B9537B7010C84107E776958"
-            BuildableName = "Sinus.app"
-            BlueprintName = "Sinus"
-            ReferencedContainer = "container:Sinus.xcodeproj">
+            BlueprintIdentifier = "56C266ED559EF232FF1A832C"
+            BuildableName = "Sinus_timo.app"
+            BlueprintName = "Sinus_timo"
+            ReferencedContainer = "container:Sinus_timo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -97,10 +97,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9B9537B7010C84107E776958"
-            BuildableName = "Sinus.app"
-            BlueprintName = "Sinus"
-            ReferencedContainer = "container:Sinus.xcodeproj">
+            BlueprintIdentifier = "56C266ED559EF232FF1A832C"
+            BuildableName = "Sinus_timo.app"
+            BlueprintName = "Sinus_timo"
+            ReferencedContainer = "container:Sinus_timo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
