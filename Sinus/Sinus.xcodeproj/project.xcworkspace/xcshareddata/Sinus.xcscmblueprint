@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0BCFBDF50FC0645FE0D825E6936080F2EEC0E21E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7DFB879DCA55A7BDB15DE7C36E806E411543854E" : 0,
+    "0BCFBDF50FC0645FE0D825E6936080F2EEC0E21E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5C4536FB-F0D4-4A69-BCD3-75D60810639C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7DFB879DCA55A7BDB15DE7C36E806E411543854E" : "..\/..\/Library\/Mobile%20Documents\/com~apple~CloudDocs\/Studium\/6.%20Semester\/GDV\/GDV_Uebungen",
+    "0BCFBDF50FC0645FE0D825E6936080F2EEC0E21E" : "GDV\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Sinus",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Sinus\/Sinus.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/s0llie\/GDV.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0BCFBDF50FC0645FE0D825E6936080F2EEC0E21E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/gdv-git.informatik.hs-fulda.de\/yjung\/GDV_Uebungen.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7DFB879DCA55A7BDB15DE7C36E806E411543854E"
+    }
+  ]
+}
