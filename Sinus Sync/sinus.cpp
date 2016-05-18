@@ -2,6 +2,7 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QGridLayout>
+#include <QPainter>
 
 #include "sinus.h"
 #include "canvas.h"
@@ -14,6 +15,7 @@ Sinus::Sinus(QWidget *parent)
 	// instantiate Canvas and button
 	viewport = new Canvas();
 	btnDrawSin = new QPushButton("&Draw Sinus");
+    btnDrawP = new QPushButton("&Draw Point");
 
 	// instantiate elements for setting world window
 	ledMinX = new QLineEdit("0");
@@ -63,6 +65,7 @@ Sinus::Sinus(QWidget *parent)
     mainLayout->addWidget(ledPy, 7, 2);
     
 	mainLayout->addWidget(btnDrawSin, 8, 1, 1, 2, Qt::AlignRight);
+    mainLayout->addWidget(btnDrawP, 9, 1, 1, 2, Qt::AlignRight);
     
 
 
@@ -71,6 +74,7 @@ Sinus::Sinus(QWidget *parent)
 	
 	// connect button click event to draw handler
 	connect(btnDrawSin, SIGNAL(clicked()), this, SLOT(drawBtnPressed()));
+    connect(btnDrawP, SIGNAL(clicked()), this, SLOT(pDrawBtnPressed()));
 }
 
 /** d'tor */
@@ -94,4 +98,15 @@ void Sinus::drawBtnPressed()
 
 	// force redraw
 	update();
+}
+
+void Sinus::pDrawBtnPressed()
+{
+    QPointF point;
+    point.setX(ledPx->text().toFloat());
+    point.setY(ledPy->text().toFloat());
+    viewport->setPoint(point);
+    // force redraw
+    update();
+
 }

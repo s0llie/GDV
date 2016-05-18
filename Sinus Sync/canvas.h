@@ -15,6 +15,7 @@ public:
 	QSize sizeHint() const;
 
 	void setWorld(const QPointF &min, const QPointF &max);
+    void setPoint(const QPointF &p);
 
 protected:
 	void paintEvent(QPaintEvent *event);
@@ -23,7 +24,7 @@ protected:
 	QPointF DC_to_WC(const QPoint  &dc);
 
 private:
-	QPointF wMin, wMax;
+	QPointF wMin, wMax, pnt;
 };
 
 #endif // CANVAS_H

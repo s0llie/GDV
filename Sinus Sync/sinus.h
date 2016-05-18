@@ -18,11 +18,13 @@ public:
 
 private slots:
 	void drawBtnPressed();
+    void pDrawBtnPressed();
 
 private:
 	Canvas *viewport;
 
 	QPushButton *btnDrawSin;
+    QPushButton *btnDrawP;
 	QLabel *lblMinX;
 	QLabel *lblMaxX;
 	QLabel *lblMinY;

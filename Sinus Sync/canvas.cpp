@@ -1,11 +1,10 @@
 #include <QPainter>
 #include <math.h>
-
 #include "canvas.h"
 
 Canvas::Canvas(QWidget *parent)
 	: QFrame(parent),
-	  wMin(0, 0), wMax(1, 1)
+	  wMin(0, 0), wMax(1, 1), pnt(0, 0)
 {
 	setFrameStyle(QFrame::Box);
 }
@@ -33,12 +32,14 @@ void Canvas::setWorld(const QPointF &min, const QPointF &max)
 	wMax.ry() = max.y();
 }
 
+void Canvas::setPoint(const QPointF &p){
+    pnt = WC_to_DC(p);
+}
+
 void Canvas::paintEvent(QPaintEvent *event)
 {
     QFrame::paintEvent(event);
-    int schrittZaehler = 500;
-    int posYAchse = width()/10;
-    
+    double schritte = 0.025f;
 
 	// TODO; implement the following drawing functionality!
 
@@ -49,24 +50,22 @@ void Canvas::paintEvent(QPaintEvent *event)
     
 	// then draw axis of abscissas 
     QPainterPath path;
-//    path.moveTo(WC_to_DC(QPointF(posYAchse, height())));
-//    path.lineTo(WC_to_DC(QPointF(posYAchse, 0)));
-//    path.moveTo(WC_to_DC(QPointF(0, height()/2)));
-//    path.lineTo(WC_to_DC(QPointF(width(), height()/2)));
-//    painter.drawPath(path);
+    path.moveTo(WC_to_DC(QPointF(0, wMax.y())));
+    path.lineTo(WC_to_DC(QPointF(0, wMin.y())));
+    path.moveTo(WC_to_DC(QPointF(wMin.x(), 0)));
+    path.lineTo(WC_to_DC(QPointF(wMax.x(), 0)));
+    painter.drawPath(path);
+    
 	// finally draw sine function
-    
-
-    
-    double schritte = (width()-posYAchse)/schrittZaehler;
-    double weg = 0;
-    path.moveTo(WC_to_DC(QPointF(0, height()/2)));
+    double weg = wMin.x();
+    path.moveTo(WC_to_DC(QPointF(weg, (sin(-weg)))));
     while (weg< width()) {
-        path.lineTo(WC_to_DC(QPointF(weg - (posYAchse) ,sin(weg))));
-        //weg = weg + 0.001;
+        path.lineTo(WC_to_DC(QPointF(weg, (sin(-weg)))));
         weg = weg + schritte;
     }
     painter.drawPath(path);
+    
+    painter.drawEllipse(pnt, 5, 5);
 
 }
 
@@ -85,9 +84,7 @@ QPoint Canvas::WC_to_DC(const QPointF &wc)
 
     x = (wc.x() - wx0) * ((dx1 - dx0) / (wx1 - wx0)) + dx0;
     y = (wc.y() - wy0) * ((dy1 - dy0) / (wy1 - wy0)) + dy0;
-
     
-
 	return QPoint(x, y);
 }
 
