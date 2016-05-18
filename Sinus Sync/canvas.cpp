@@ -36,13 +36,9 @@ void Canvas::setWorld(const QPointF &min, const QPointF &max)
 void Canvas::paintEvent(QPaintEvent *event)
 {
     QFrame::paintEvent(event);
-
-//    QPainterPath path;
-//    path.moveTo(0, 0);
-//    path.lineTo(width()-50, height()-50);
-//    path.lineTo(0, width());
-//    painter.setPen(Qt::red);
-//    painter.drawPath(path);
+    int schrittZaehler = 500;
+    int posYAchse = width()/10;
+    
 
 	// TODO; implement the following drawing functionality!
 
@@ -53,27 +49,24 @@ void Canvas::paintEvent(QPaintEvent *event)
     
 	// then draw axis of abscissas 
     QPainterPath path;
-    path.moveTo(width()/10, height());
-    path.lineTo(width()/10, 0);
-    path.moveTo(0, height()/2);
-    path.lineTo(width(), height()/2);
-    painter.drawPath(path);
+//    path.moveTo(WC_to_DC(QPointF(posYAchse, height())));
+//    path.lineTo(WC_to_DC(QPointF(posYAchse, 0)));
+//    path.moveTo(WC_to_DC(QPointF(0, height()/2)));
+//    path.lineTo(WC_to_DC(QPointF(width(), height()/2)));
+//    painter.drawPath(path);
 	// finally draw sine function
     
-    //Test
-    /**
-    int schritte = (width()-(width()/10))/500;
-    int weg = 0;
-    path.moveTo(width()/10, height()/2);
-    while (weg < width()) {
-        path.lineTo(weg, (100*sin(weg)+ height()/2));
+
+    
+    double schritte = (width()-posYAchse)/schrittZaehler;
+    double weg = 0;
+    path.moveTo(WC_to_DC(QPointF(0, height()/2)));
+    while (weg< width()) {
+        path.lineTo(WC_to_DC(QPointF(weg - (posYAchse) ,sin(weg))));
+        //weg = weg + 0.001;
         weg = weg + schritte;
     }
     painter.drawPath(path);
-    */
-    
-    
-    
 
 }
 
@@ -89,9 +82,6 @@ QPoint Canvas::WC_to_DC(const QPointF &wc)
         dy1 = height()-1, x, y;
 
 	// TODO; calculate window-viewport transformation for point (x, y)!
-    
-    //x = ((dx1 - dx0)/(wx1-wx0))*wx+((dx0-(wx0*(dx1-dx0)/(wx1-wx0)));
-    //y = ((dy1 - dy0)/(wy1-wy0))*wy+((dy0-(wy0*(dy1-dy0)/(wy1-wy0)));
 
     x = (wc.x() - wx0) * ((dx1 - dx0) / (wx1 - wx0)) + dx0;
     y = (wc.y() - wy0) * ((dy1 - dy0) / (wy1 - wy0)) + dy0;
