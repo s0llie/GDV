@@ -49,56 +49,62 @@ and open the template in the editor.
             <Shape USE="Grid"></Grid>
         </Transform>
         
-        <!-- Uebungsaufgabe(n) -->
-        <Transform id='myTrafo' translation="1 10 1">
+<!-- y stab -->
+        <MatrixTransform matrix="1 0 0 0, 0 1 0 0, 0 0 1 0, 0 1.5 0 1">
           <shape>
               <Appearance>
-                  <material diffuseColor="1 0 0"></material>
+                  <material diffuseColor="0 1 0"></material>
               </Appearance>
-              <!--<box id="box_M"></box>-->
+              <cylinder radius="0.2" height="3"></cylinder>
           </shape>  
-        </Transform>
+        </MatrixTransform>
+<!-- y spitze -->
+		<MatrixTransform matrix="1 0 0 0, 0 1 0 0, 0 0 1 0, 0 3.5 0 1">
+			<Shape>
+				<Appearance>
+					<Material diffuseColor="0 1 0"></Material>
+				</Appearance>
+				<cone bottomRadius="0.3" height="1"></cone>
+			</Shape>
+		</MatrixTransform>
 
-        <Transform rotation="1 0 0 0.7853982"><!-- 45 Grad Drehung um x-Achse -->
-			<Transform translation="0 -1 0" ><!-- Verschiebung auf die x-Achse -->
-				<Transform rotation="1 0 0 4.712389"><!-- Rotation um x-Achse 270 Grad -->
-					<Transform translation="0 1 0"><!-- Verschiebung auf die gewuenschte Achse -->
-						<Transform translation="-1 0 0"><!-- auf vektor r verschieben -->
-							<Transform rotation="1 0 0 -0.7853982"><!-- auf y-Achse drehen -->
-								<Transform 	rotation="0 1 0 1.57"><!-- 90 Grad um y-Achse drehen -->
-									<Transform rotation="1 0 0 0.7853982"><!-- zurück auf r -->
-										<Transform translation="1 0 0"><!-- zurück auf p -->
-							          		<shape>
-								              	<Appearance>
-								                  	<material diffuseColor="0 0 1"></material>
-								              	</Appearance>
-								              	<box id="box_N_P" size="1 1 1"></box>
-								          	</shape>
-								        </Transform>
-						          	</Transform>
-						        </Transform>
-						    </Transform>
-				        </Transform>
-			        </Transform>
-			    </Transform>
-	        </Transform>
-        </Transform>
+<!-- x stab -->
+		<MatrixTransform matrix="0 1 0 0, -1 0 0 0, 0 0 1 0, 1.5 0 0 1">
+			<Shape>
+				<Appearance>
+					<Material diffuseColor="1 0 0"></Material>
+				</Appearance>
+				<cylinder radius="0.2" height="3"></cylinder>
+			</Shape>
+		</MatrixTransform>
+<!-- x spitze -->
+		<MatrixTransform matrix="0 -1 0 0, 1 0 0 0, 0 0 1 0, 3.5 0 0 1">
+			<Shape>
+				<Appearance>
+					<Material diffuseColor="1 0 0"></Material>
+				</Appearance>
+				<cone bottomRadius="0.3" height="1"></cone>
+			</Shape>
+		</MatrixTransform>
 
-        <Transform id='aufgN' rotation="1 0 0 0.7853982">
-			<Transform id="aufgO" translation="0 -1 0" >
-				<Transform rotation="1 0 0 4.712389">
-					<MatrixTransform matrix="0 -0.71 0.71 0, -0.71 0.49 0.49 0, -0.71 -0.49 0.49 0, -1 -0.71 0.71 1">
-						<shape>
-					  		<Appearance>
-					   			<material diffuseColor="0 1 0"></material>
-					  		</Appearance>
-					  		<box id="auto" size="1 1 1"></box>
-						</shape>
-					</MatrixTransform>
-				</Transform>
-			</Transform>
-		</Transform>
-
+<!-- z stab -->
+		<MatrixTransform matrix="1 0 0 0, 0 0 1 0, 0 -1 0 0, 0 0 1.5 1">
+			<Shape>
+				<Appearance>
+					<Material diffuseColor="0 0 1"></Material>
+				</Appearance>
+				<cylinder radius="0.2" height="3"></cylinder>
+			</Shape>
+		</MatrixTransform>
+<!-- z spitze -->
+		<MatrixTransform matrix="1 0 0 0, 0 0 1 0, 0 -1 0 0, 0 0 3.5 1">
+			<Shape>
+				<Appearance>
+					<Material diffuseColor="0 0 1"></Material>
+				</Appearance>
+				<cone bottomRadius="0.3" height="1"></cone>
+			</Shape>
+		</MatrixTransform>
     </Scene>
 </X3D>
 </body>
