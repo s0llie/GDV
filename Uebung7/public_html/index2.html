@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <title>X3D</title>
+    <script type="text/javascript" src="http://x3dom.org/download/dev/x3dom.js">
+    </script>
+    <script type="text/javascript" src="x3djs.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="http://x3dom.org/download/dev/x3dom.css">
+</head>
+<body>
+<X3D width="800" height="500">
+  <Scene id="theScene">
+    <!--<Transform translation="50 50 30">
+      <Transform rotation="0 1 0 1.0471975511966">
+        <Transform rotation="1 0 0 -0.9">
+          <Viewpoint></Viewpoint>
+        </transform>
+      </transform>
+    </transform>-->
+
+
+    <Transform>
+      <Shape>
+        <IndexedFaceSet solid='true' coordIndex='0 1 2 3 -1' colorPerVertex="false">
+          <Coordinate point='-30 -2 -30, -30 -2 30, 30 -2 30, 30 -2 -30'></Coordinate>
+          <Color color= "0.1 0.5 0.1" />
+        </IndexedFaceSet>
+      </Shape>
+    </Transform>
+  </Scene>
+</X3D>
+<button onclick="createTrees();">Create Trees</button>
+</body>
+</html>
